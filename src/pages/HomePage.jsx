@@ -123,9 +123,7 @@ const HomePage = () => {
       </Swiper>
     </section>
 
-    <section>
-      hi
-    </section>
+  
 
 
     </>
