@@ -4,5 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // 👈 ensures correct route handling
+  base: '/', // ensures proper routing
+  build: {
+    outDir: 'dist', // Vercel will serve from this folder
+  },
 })
