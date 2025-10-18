@@ -11,17 +11,9 @@ import MemberCard from '../components/MemberCard';
 import members from '../Mock/member';
 
 const HomePage = () => {
-  const filterRecentNews = (items, days = 30) => {
-  const now = new Date();
-  return items.filter(item => {
-    const newsDate = new Date(item.date);
-    const diffTime = now - newsDate;
-    const diffDays = diffTime / (1000 * 60 * 60 * 24);
-    return diffDays <= days;
-  });
-};
 
-  const recentNews = filterRecentNews(newsItems, 10); // last 30 days
+const recentNews = newsItems.slice(-3);
+console.log(recentNews);
 
   return (
     <>
